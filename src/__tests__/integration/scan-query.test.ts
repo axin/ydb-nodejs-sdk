@@ -8,7 +8,7 @@ import {
     Row,
 } from '../../test-utils';
 import {Session} from '../../table';
-import {TypedData} from '../../types';
+import {TypedData} from '../../typed-data';
 
 async function executeScanQuery(session: Session): Promise<TypedData[]> {
     const query = `SELECT * FROM ${TABLE};`;

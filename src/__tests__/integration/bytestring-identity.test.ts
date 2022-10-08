@@ -5,7 +5,8 @@ import {
     TABLE
 } from '../../test-utils';
 import {Column, Session, TableDescription} from '../../table';
-import {declareType, TypedData, Types} from "../../types";
+import {Types} from '../../types';
+import {declareType, TypedData} from '../../typed-data';
 import {withRetries} from "../../retries";
 
 

@@ -9,6 +9,7 @@ import {Endpoint} from './discovery';
 import {IAuthService} from './credentials';
 import {getVersionHeader} from './version';
 import {ISslCredentials} from './ssl-credentials';
+import {emitWarning} from 'process';
 
 function getDatabaseHeader(database: string): [string, string] {
     return ['x-ydb-database', database];
@@ -208,4 +209,13 @@ export function toLong(value: Long | number): Long {
         return Long.fromNumber(value);
     }
     return value;
+}
+
+const shownDeprecations = new Set();
+
+export function warnDeprecation(message: string) {
+    if (!shownDeprecations.has(message)) {
+        shownDeprecations.add(message);
+        emitWarning(message);
+    }
 }

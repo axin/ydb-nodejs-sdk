@@ -2,7 +2,8 @@ import Long from 'long';
 import {google, Ydb} from 'ydb-sdk-proto';
 import Driver from '../../driver';
 import {initDriver, destroyDriver} from '../../test-utils';
-import {TypedData, TypedValues, Types} from '../../types';
+import {TypedValues, Types} from '../../types';
+import {TypedData} from '../../typed-data';
 import NullValue = google.protobuf.NullValue;
 
 describe('Types', () => {

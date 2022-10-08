@@ -2,21 +2,23 @@ export {Ydb} from 'ydb-sdk-proto';
 export {default as getLogger, Logger} from './logging';
 export {default as Driver, IDriverSettings, IPoolSettings} from './driver';
 export {
-    declareType,
     StructFields,
     Types,
     TypedValues,
+    primitiveTypeToValue,
+    StringFunction
+} from './types';
+export {
+    declareType,
     TypedData,
     TypedDataOptions,
     withTypeOptions,
     NamesConversion,
     snakeToCamelCaseConversion,
     identityConversion,
-    primitiveTypeToValue,
     typeMetadataKey,
     getNameConverter,
-    StringFunction
-} from './types';
+} from './typed-data';
 export {
     SessionPool,
     Session,

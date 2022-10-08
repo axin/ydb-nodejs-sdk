@@ -8,7 +8,8 @@ import {
     TABLE
 } from '../../test-utils';
 import {ReadTableSettings, Session} from '../../table';
-import {TypedValues, TypedData} from '../../types';
+import {TypedValues} from '../../types';
+import {TypedData} from '../../typed-data';
 
 async function readTable(session: Session, settings: ReadTableSettings): Promise<TypedData[]> {
     const rows: TypedData[] = [];

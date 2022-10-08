@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import Driver, {IDriverSettings} from "./driver";
-import {declareType, TypedData, Types} from "./types";
+import {Types} from "./types";
+import {declareType, TypedData} from "./typed-data";
 import {Column, Session, TableDescription} from "./table";
 import {withRetries} from "./retries";
 import {AnonymousAuthService} from "./credentials";
