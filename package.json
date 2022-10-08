@@ -14,11 +14,12 @@
     "build/**"
   ],
   "scripts": {
-    "test:unit": "exit 0",
-    "test:integration:development": "TEST_ENVIRONMENT=dev jest --config jest.config.development.js",
-    "test:integration:production": "jest --config jest.config.production.js",
-    "test:all": "run-p test:unit test:integration:production",
-    "test": "npm run test:unit",
+    "test:unit:development": "TEST_ENVIRONMENT=dev jest --config jest.config.dev.unit.js",
+    "test:unit:production": "jest --config jest.config.prod.unit.js",
+    "test:integration:development": "TEST_ENVIRONMENT=dev jest --config jest.config.dev.integration.js",
+    "test:integration:production": "jest --config jest.config.prod.integration.js",
+    "test:all": "run-p test:unit:production test:integration:production",
+    "test": "npm run test:unit:development",
     "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json && ./fixup.sh",
     "clean": "rm -rf build",
     "prepublish": "npm run clean && npm run build",

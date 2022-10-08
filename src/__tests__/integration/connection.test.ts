@@ -1,5 +1,5 @@
-import Driver from '../driver';
-import {initDriver, destroyDriver} from '../test-utils';
+import Driver from '../../driver';
+import {initDriver, destroyDriver} from '../../test-utils';
 
 describe('Connection', () => {
     let driver: Driver;
